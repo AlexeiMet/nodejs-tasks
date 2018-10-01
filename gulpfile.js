@@ -10,15 +10,9 @@ gulp.task('build', () =>
 
 gulp.task('dev', ['build'], () =>
   nodemon({
-    script: 'dist/index.js',
+    script: 'dist/main.js',
     watch: 'src',
     legacyWatch: true,
     tasks: ['build']
   })
 );
-
-gulp.task('test', () => {
-  gulp.watch('test/**/*', () => {
-    console.log('test changed');
-  });
-});
