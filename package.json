@@ -1,0 +1,49 @@
+{
+  "name": "nodejs-tasks",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r @babel/register src/main.js",
+    "start:watch": "nodemon -L -r @babel/register src/main.js --inspect",
+    "build": "gulp build",
+    "build:watch": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexeiMet/nodejs-tasks.git"
+  },
+  "author": "Aleksei Zhabitenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexeiMet/nodejs-tasks/issues"
+  },
+  "homepage": "https://github.com/AlexeiMet/nodejs-tasks#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-nodemon": "^2.2.1",
+    "nodemon": "^1.18.4"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage"
+        }
+      ]
+    ],
+    "sourceMaps": true
+  },
+  "browserslist": [
+    "maintained node versions"
+  ],
+  "dependencies": {
+    "csv-parse": "^3.0.0",
+    "fast-xml-parser": "^3.12.5"
+  }
+}
